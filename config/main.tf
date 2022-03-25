@@ -32,6 +32,6 @@ data "aws_iam_policy_document" "policy" {
 
 resource "aws_iam_policy_attachment" "policy" {
   name       = "${aws_iam_policy.policy.name}-attachment"
-  users      = [aws_iam_user.spacelift.name]
+  users      = [aws_iam_user.demo.name]
   policy_arn = aws_iam_policy.policy.arn
 }
